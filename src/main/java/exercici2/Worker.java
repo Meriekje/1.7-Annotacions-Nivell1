@@ -1,4 +1,4 @@
-package exercici1;
+package exercici2;
 
 public class Worker {
     String firstName;
@@ -13,5 +13,10 @@ public class Worker {
 
     public double calculateSalary(int hoursWorked) {
         return hoursWorked * hourlyRate;
+    }
+
+    @Deprecated
+    public double calculateOldSalary(int hoursWorked) {
+        return hoursWorked * hourlyRate * 1.1;
     }
 }

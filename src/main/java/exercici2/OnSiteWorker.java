@@ -1,4 +1,4 @@
-package exercici1;
+package exercici2;
 
 class OnSiteWorker extends Worker {
     private static final double FUEL_COST = 100.0;
@@ -7,10 +7,13 @@ class OnSiteWorker extends Worker {
         super(firstName, lastName, hourlyRate);
     }
 
-
     @Override
     public double calculateSalary(int hoursWorked) {
-        return super.calculateSalary(hoursWorked) + FUEL_COST;
+        return (hoursWorked * hourlyRate) + FUEL_COST;
     }
 
+    @Deprecated
+    public double calculateOldSalaryWithGasoline(int hoursWorked) {
+        return hoursWorked * hourlyRate + FUEL_COST * 1.2;
+    }
 }

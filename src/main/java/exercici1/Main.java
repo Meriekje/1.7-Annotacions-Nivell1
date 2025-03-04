@@ -2,14 +2,13 @@ package exercici1;
 
 public class Main {
     public static void main(String[] args) {
-        // Create instances of each class
-        OnlineWorker onlineWorker = new OnlineWorker("John", "Doe", 20.0);
-        OnSiteWorker onSiteWorker = new OnSiteWorker("Jane", "Smith", 25.0);
 
-        // Calculate and print salary for online worker
-        System.out.println("Online Worker Salary: " + onlineWorker.calculateSalary(160) + " USD");
+        Worker worker = new Worker("John", "Doe", 15.0);
+        OnSiteWorker onSiteWorker = new OnSiteWorker("Jane", "Smith", 20.0);
+        OnlineWorker onlineWorker = new OnlineWorker("Alex", "Johnson", 18.0);
 
-        // Calculate and print salary for in-person worker
-        System.out.println("In-Person Worker Salary: " + onSiteWorker.calculateSalary(160) + " USD");
+        System.out.println("Salary of a worker: " + worker.calculateSalary(160));
+        System.out.println("Salary of an on site worker: " + onSiteWorker.calculateSalary(160));
+        System.out.println("Salary of an online worker: " + onlineWorker.calculateSalary(160));
     }
 }
